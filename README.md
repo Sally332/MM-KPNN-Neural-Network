@@ -8,7 +8,6 @@ This guide walks you through a simplified, step-by-step implementation of the Mu
 - Training and evaluating the model on example data  
 - Generating performance comparisons and visualizations (e.g., loss curves, accuracy metrics)  
 - Integrating external prior graphs as separate edge sets  
-
 All code is in a single Jupyter Notebook (`Pipeline_mm-kpnn.ipynb`) with line-by-line comments to explain the math and logic of the process
 ---
 
@@ -50,23 +49,9 @@ Training loop & evaluation
 Performance comparison plots
 Integration of external prior graphs (gene–TF networks)
 
-4. Folder Structure
-
-MM-KPNN-Neural-Networks/
-├── README.md
-├── docs/
-│   └── README.pdf               
-├── data/                        
-│   ├── example_graph.edgelist
-│   └── example_features.csv
-└── scripts/
-    └── Pipeline_mm-kpnn.ipynb    
-
-6. Contact & Credits
+Contact & Credits
 Author: Sally L. Yepes Torres
 Email: sallyepes233@gmail.com
-
 Last Updated: May 2025
-
 License: MIT
 
