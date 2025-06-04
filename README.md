@@ -26,25 +26,18 @@ numpy, pandas, scikit-learn, matplotlib, seaborn
 
 ## Quick Start
 Launch Jupyter Notebook
-
 Run each cell in order. The notebook is divided into sections:
-
 Data loading & preprocessing
-
 Model definition (MM-KPNN layers, loss functions)
-
 Training loop & evaluation
-
 Performance comparison plots
-
 Integration of external prior graphs (gene–TF networks)
 
 
 ## For full documentation, see docs/README.pdf
 
 Contact & Credits
-Author: Sally L. Yepes Torres
-
+Author: Sally Yepes
 Email: sallyepes233@gmail.com
 
 Last Updated: May 2025
