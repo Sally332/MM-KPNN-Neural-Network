@@ -1,7 +1,7 @@
 # MM-KPNN Neural Networks
 
 ## 1. Overview
-This guide walks you through a simplified, step-by-step implementation of the Multi-Modal Knowledge-Primed Neural Network (MM-KPNN) using PyTorch-Geometric. It covers:
+This guide walks you through a simplified, step-by-step implementation of Multi-Modal Knowledge-Primed Neural Networks (MM-KPNN) using PyTorch-Geometric. It covers:
 
 - Loading and preprocessing input graphs (e.g., gene–TF networks, multimodal data)  
 - Building the MM-KPNN architecture with biological context  
