@@ -8,6 +8,7 @@ This guide walks you through a simplified, step-by-step implementation of the Mu
 - Training and evaluating the model on example data  
 - Generating performance comparisons and visualizations (e.g., loss curves, accuracy metrics)  
 - Integrating external prior graphs as separate edge sets  
+
 All code is in a single Jupyter Notebook (`Pipeline_mm-kpnn.ipynb`) with line-by-line comments to explain the math and logic of the process
 ---
 
