@@ -11,8 +11,8 @@ MM-KPNN combines the structure of biological networks with the flexibility of gr
 - **Hybrid architecture**: Combines a GNN branch over the prior graph with modality-specific dense branches.
 - **Interpretability**: Enables node and edge attribution to uncover the biological drivers of classification.
 
-- Richly commented script, guide users through logic, assumptions, and interpretation. scripts/Pipeline_mm-kpnn.ipynb
-Scripts for preprocessing real scRNA-seq, scATAC-seq, and spatial data are provided as supporting material for demonstration.
+- Richly commented script guide users through logic, assumptions, and interpretation. "scripts/Pipeline_mm-kpnn.ipynb"
+- Scripts for preprocessing real scRNA-seq, scATAC-seq, and spatial data are provided as supporting material for demonstration.
 
 ## Applications
 
@@ -22,7 +22,7 @@ This pipeline supports:
 - Extensions to real-world clinical single-cell datasets
 
 ## Quick Start
-For full documentation and methods see docs/README.pdf and scripts/Pipeline_mm-kpnn.ipynb
+For full documentation and methods see "docs/README.pdf" and "scripts/Pipeline_mm-kpnn.ipynb"
   
 ## License
 
