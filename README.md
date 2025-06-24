@@ -12,7 +12,8 @@ MM-KPNN combines the structure of biological networks with the flexibility of gr
 - **Interpretability**: Enables node and edge attribution to uncover the biological drivers of classification.
 
 - Richly commented script guide users through logic, assumptions, and interpretation. "scripts/Pipeline_mm-kpnn.ipynb"
-- Scripts for preprocessing real scRNA-seq, scATAC-seq, and spatial data are provided as supporting material for demonstration.
+- The Prototype.ipynb serves as a conceptual demonstration of the model's design, flexibility, and explainability features.
+- Preprocessing real scRNA-seq, scATAC-seq, and spatial data are provided as supporting material for demonstration.
 
 ## Applications
 
@@ -22,7 +23,7 @@ This pipeline supports:
 - Extensions to real-world clinical single-cell datasets
 
 ## Quick Start
-For full documentation and methods see "docs/README.pdf" and "scripts/Pipeline_mm-kpnn.ipynb"
+For full documentation and methods see "docs/README.pdf", "scripts/Pipeline_mm-kpnn.ipynb", and scripts/Prototype.ipynb
   
 ## License
 
