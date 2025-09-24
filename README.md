@@ -1,5 +1,6 @@
 # MM-KPNN: Multi-Modal Knowledge-Primed Neural Network
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17194732.svg)](https://doi.org/10.5281/zenodo.17194732)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the implementation of **MM-KPNN** (Multi-Modal Knowledge-Primed Neural Network), a hybrid neural architecture that integrates biological prior knowledge with multi-modal single-cell data (e.g., scRNA-seq, scATAC-seq, spatial transcriptomics) to enhance cell-type classification and interpretability.
 
