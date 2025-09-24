@@ -25,10 +25,10 @@ This pipeline supports:
 ## Quick Start
 For full documentation and methods see "docs/README.pdf", "scripts/Pipeline_mm-kpnn.ipynb", and scripts/Prototype.ipynb
   
-## License
 
-MIT License.
+## Citation
 
-## Author
+If you use or adapt this framework, please cite:
 
-Sally Yepes. Email:sallyepes233@gmail.com  
+Yepes S. *MM-KPNN: Multi-Modal Knowledge-Primed Neural Network*.  
+GitHub, 2025. https://github.com/Sally332/MM-KPNN-Neural-Network
