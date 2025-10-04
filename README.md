@@ -14,20 +14,23 @@
 **MM-KPNN** is an interpretable multimodal deep-learning framework that integrates **scRNA-seq**, **scATAC-seq**, and **spatial transcriptomics** data through biologically constrained neural architectures. Building upon existing multimodal models, MM-KPNN introduces **pathway- and transcription-factor-aware connectivity** within the network topology, enabling transparent interpretation of how molecular programs and regulatory networks drive predictions. This repository generalizes the original single-cell prototype into a **reproducible benchmarking platform for multimodal integration and explainability**, supporting expansion to real datasets, regulatory priors, and biological validation.
 
 ---
-
 ## Key Features
 
-- **Biologically Grounded Architecture**  
-  Decoder constrained by **pathway** and **TF nodes**, linking latent representations to biologically interpretable output logits.
+- **Concept-Bottleneck Architecture**  
+  MM-KPNN embeds **biological concepts—pathways, transcription factors, and regulatory modules—directly into the network topology**.  
+  This design constrains latent representations to interpretable biological units, ensuring that every prediction can be traced through meaningful mechanisms.
 
-- **Cross-Modality Integration**  
-  Jointly models **gene expression**, **chromatin accessibility**, and **spatial features** within a unified multimodal graph framework.
+- **Multimodal Integration**  
+  Jointly models **gene expression**, **chromatin accessibility**, and **spatial features** within a unified graph framework, linking regulatory and phenotypic layers of single-cell data.
 
 - **Mechanistic Interpretability**  
-  Produces **pathway- and regulator-level attributions**, including node and edge relevance via *gradient × input*, *integrated gradients*, and *GNNExplainer*-compatible modules.
+  Provides transparent attribution at both **node** and **edge** levels using *gradient × input*, *integrated gradients*, and *GNNExplainer* methods, revealing which molecular programs and regulatory interactions drive model decisions.
 
-- **Reproducible Infrastructure**  
-  Implements standardized data handling, model training, and evaluation pipelines ready for **HPC or cloud environments**.
+- **Reproducible and Scalable Infrastructure**  
+  Built as a modular, end-to-end pipeline compatible with **HPC and cloud environments**, supporting standardized data handling, evaluation metrics, and reproducible experiment tracking.
+
+- **Extensible Framework Family**  
+  Serves as the foundation for derivative architectures—including **SpatialMMKPNN**, **Perturbation-MMKPNN**, and **DrugResponse-GNN**—which apply the same interpretable design to spatial, perturbational, and pharmacogenomic contexts.
 
 ---
 
