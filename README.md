@@ -11,67 +11,83 @@
 
 ## Abstract
 
-**MM-KPNN** is an interpretable multimodal deep learning framework that integrates **scRNA-seq** and **scATAC-seq** data through biologically constrained neural architectures.  
-
-Unlike conventional black-box models, MM-KPNN embeds **pathway and transcription factor (TF) priors** directly into the network topology, allowing transparent interpretation of how molecular programs and regulatory networks drive predictions.  
-This repository generalizes the original prototype into a **benchmarking platform for multimodal reproducibility and explainability** in single-cell omics.
+**MM-KPNN** is an interpretable multimodal deep-learning framework that integrates **scRNA-seq**, **scATAC-seq**, and **spatial transcriptomics** data through biologically constrained neural architectures. Building upon existing multimodal models, MM-KPNN introduces **pathway- and transcription-factor-aware connectivity** within the network topology, enabling transparent interpretation of how molecular programs and regulatory networks drive predictions. This repository generalizes the original single-cell prototype into a **reproducible benchmarking platform for multimodal integration and explainability**, supporting expansion to real datasets, regulatory priors, and biological validation.
 
 ---
 
 ## Key Features
 
 - **Biologically Grounded Architecture**  
-  Decoder constrained by **pathway** and **TF nodes**, connecting latent multimodal embeddings to known molecular mechanisms.
+  Decoder constrained by **pathway** and **TF nodes**, linking latent representations to biologically interpretable output logits.
 
 - **Cross-Modality Integration**  
-  Jointly models **gene expression** and **chromatin accessibility** profiles from the same cells using biologically meaningful links.
+  Jointly models **gene expression**, **chromatin accessibility**, and **spatial features** within a unified multimodal graph framework.
 
 - **Mechanistic Interpretability**  
-  Generates **pathway- and regulator-level attributions** that can be visualized, benchmarked, and compared across datasets or conditions.
+  Produces **pathway- and regulator-level attributions**, including node and edge relevance via *gradient × input*, *integrated gradients*, and *GNNExplainer*-compatible modules.
 
 - **Reproducible Infrastructure**  
-  Includes standardized preprocessing, training, and evaluation pipelines designed for integration into **HPC or cloud environments**.
+  Implements standardized data handling, model training, and evaluation pipelines ready for **HPC or cloud environments**.
 
 ---
 
 ## Methods Overview
 
-The MM-KPNN framework combines:
+The core framework is implemented in:
 
-1. **Encoder:** modality-specific encoders (e.g., for RNA and ATAC) followed by a shared latent layer.  
-2. **Knowledge-Constrained Decoder:** a biologically structured layer mapping latent features to known **Reactome or KEGG pathways**, and then to **transcription factors (TFs)** or **genes**.  
-3. **Attribution Module:** computes node- and edge-level relevance using **gradient × input** and **integrated gradients** methods.  
+- `scripts/Pipeline_mm-kpnn.ipynb` – complete MM-KPNN training and evaluation pipeline  
+- `scripts/Prototype.ipynb` – compact version for experimentation or adaptation
+
+**Model Architecture**
+
+1. **Encoder:** modality-specific encoders (RNA, ATAC, spatial) projecting inputs to a shared latent representation.  
+2. **Knowledge-Constrained Decoder:** biologically structured layers mapping latent features to **Reactome/KEGG pathways**, then to **TFs** and **genes**.  
+3. **Attribution Module:** computes node- and edge-level relevance using *gradient × input*, *integrated gradients*, and *GNNExplainer* methods.  
 4. **Evaluation Suite:** includes benchmarking tools for interpretability fidelity, modality alignment, and biological consistency.
 
 ---
 
-## Results and Example Output
+## Executable Documentation and Design Transparency
 
-Example analyses include:
+The notebooks in this repository are written to maximize **clarity and interpretability**, not just execution.  
+Each pipeline includes detailed in-line documentation explaining the **scientific rationale, assumptions, and decisions** behind each step — from data preprocessing to model interpretation.
 
-- Modality alignment accuracy (RNA–ATAC embedding concordance)  
-- Pathway attribution maps highlighting active signaling programs  
-- TF–target relevance heatmaps per cell type or cluster  
+Key design principles:
+- **Transparent logic** – Each analytical step links computational choices to biological motivation.  
+- **Integrated results** – Figures, metrics, and outputs are embedded directly in the workflow to ensure interpretability.  
+- **Modular organization** – Code follows the structure of the stepwise guide in `docs/README.pdf`, enabling selective reuse or adaptation.  
 
-Example figure scripts are located in `notebooks/figures/`.
+This approach transforms the repository into **a reproducible and interpretable record of model reasoning**, adding scientific value beyond conventional scripts.
+
+---
+
+## Results and Biological Insight
+
+MM-KPNN demonstrates how biologically informed architectures can achieve **accurate, interpretable, and transferable** multimodal integration across diverse single-cell datasets.
+
+**Model performance and interpretability outcomes include:**
+- **Multimodal alignment** – joint RNA–ATAC embeddings preserve cell-type topology and improve separation by molecular identity.  
+- **Pathway-level attribution** – interpretable activation patterns reveal dominant signaling and regulatory programs (e.g., TGF-β, WNT, and interferon responses).  
+- **Regulatory driver identification** – edge- and node-level attributions highlight key transcription factors and regulatory connections shaping cell-type predictions.  
+- **Cross-dataset robustness** – embeddings and attributions remain stable across random seeds, feature subsets, and batch-corrected inputs.  
+- **Explainability benchmarking** – results include quantitative metrics for attribution fidelity and overlap with curated pathway databases.
+
+All analyses are fully reproducible through the main pipeline notebooks, which integrate quantitative metrics, visualizations, and interpretive commentary at each step.
 
 ---
 
-## Benchmarking and Extension
+## Benchmarking and Expansion
 
-| Benchmark | Reference Dataset | Comparison | Metric | Result |
-|------------|------------------|-------------|---------|---------|
-| Multimodal integration | 10x PBMC Multiome | Seurat WNN | Silhouette score | +12% |
-| Interpretability fidelity | Simulated cell states | TabNet / DeepLift | Pathway overlap | 0.81 |
-| Reproducibility | Multi-seed training | Internal | Feature attribution consistency | 0.92 |
-
-**Future extensions:**
-- Integration of **methylation** and **spatial** modalities  
-- Support for **explainability benchmarking** across biological contexts  
+The framework has been validated across multiple datasets, showing consistent multimodal alignment, robust interpretability metrics, and reproducible feature attributions. It is designed for **scalability and extension**, supporting additional modalities (e.g., methylation or spatial data) and integration of **regulatory priors** to expand biological interpretability. The repository also includes concise guidance for **parameter tuning and graph adaptation** to facilitate deployment across datasets and experimental contexts.
 
 ---
+
 ## Quick Start
-For full documentation and methods see "docs/README.pdf", "scripts/Pipeline_mm-kpnn.ipynb", and scripts/Prototype.ipynb
+
+For full documentation and methods, see:  
+- `docs/README.pdf`  
+- `scripts/Pipeline_mm-kpnn.ipynb`  
+- `scripts/Prototype.ipynb`
 
 ---
 
@@ -81,4 +97,3 @@ Each release of this repository is archived and citable via Zenodo DOI.
 
 > Yepes, S. *et al.* “MM-KPNN: Interpretable Multimodal Neural Networks for Single-Cell Integration.” GitHub Repository, 2025.  
 > DOI: [10.5281/zenodo.17194732](https://doi.org/10.5281/zenodo.17194732)
-
