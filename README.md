@@ -8,7 +8,6 @@
 **A reproducible framework for interpretable multimodal learning in single-cell biology**
 
 ---
-
 ## Abstract
 
 **MM-KPNN** is an interpretable multimodal deep-learning framework that integrates **scRNA-seq**, **scATAC-seq**, and **spatial transcriptomics** data through biologically constrained neural architectures. Building upon existing multimodal models, MM-KPNN introduces **pathway- and transcription-factor-aware connectivity** within the network topology, enabling transparent interpretation of how molecular programs and regulatory networks drive predictions. This repository generalizes the original single-cell prototype into a **reproducible benchmarking platform for multimodal integration and explainability**, supporting expansion to real datasets, regulatory priors, and biological validation.
@@ -17,8 +16,7 @@
 ## Key Features
 
 - **Concept-Bottleneck Architecture**  
-  MM-KPNN embeds **biological concepts—pathways, transcription factors, and regulatory modules—directly into the network topology**.  
-  This design constrains latent representations to interpretable biological units, ensuring that every prediction can be traced through meaningful mechanisms.
+  MM-KPNN embeds **biological concepts—pathways, transcription factors, and regulatory modules—directly into the network topology**. This design constrains latent representations to interpretable biological units, ensuring that every prediction can be traced through meaningful mechanisms.
 
 - **Multimodal Integration**  
   Jointly models **gene expression**, **chromatin accessibility**, and **spatial features** within a unified graph framework, linking regulatory and phenotypic layers of single-cell data.
@@ -33,11 +31,9 @@
   Serves as the foundation for derivative architectures—including **SpatialMMKPNN**, **Perturbation-MMKPNN**, and **DrugResponse-GNN**—which apply the same interpretable design to spatial, perturbational, and pharmacogenomic contexts.
 
 ---
-
 ## Methods Overview
 
 The core framework is implemented in:
-
 - `scripts/Pipeline_mm-kpnn.ipynb` – complete MM-KPNN training and evaluation pipeline  
 - `scripts/Prototype.ipynb` – compact version for experimentation or adaptation
 
@@ -49,11 +45,9 @@ The core framework is implemented in:
 4. **Evaluation Suite:** includes benchmarking tools for interpretability fidelity, modality alignment, and biological consistency.
 
 ---
-
 ## Executable Documentation and Design Transparency
 
-The notebooks in this repository are written to maximize **clarity and interpretability**, not just execution.  
-Each pipeline includes detailed in-line documentation explaining the **scientific rationale, assumptions, and decisions** behind each step — from data preprocessing to model interpretation.
+The notebooks in this repository are written to maximize **clarity and interpretability**, not just execution. Each pipeline includes detailed in-line documentation explaining the **scientific rationale, assumptions, and decisions** behind each step — from data preprocessing to model interpretation.
 
 Key design principles:
 - **Transparent logic** – Each analytical step links computational choices to biological motivation.  
@@ -63,7 +57,6 @@ Key design principles:
 This approach transforms the repository into **a reproducible and interpretable record of model reasoning**, adding scientific value beyond conventional scripts.
 
 ---
-
 ## Results and Biological Insight
 
 MM-KPNN demonstrates how biologically informed architectures can achieve **accurate, interpretable, and transferable** multimodal integration across diverse single-cell datasets.
@@ -78,13 +71,11 @@ MM-KPNN demonstrates how biologically informed architectures can achieve **accur
 All analyses are fully reproducible through the main pipeline notebooks, which integrate quantitative metrics, visualizations, and interpretive commentary at each step.
 
 ---
-
 ## Benchmarking and Expansion
 
 The framework has been validated across multiple datasets, showing consistent multimodal alignment, robust interpretability metrics, and reproducible feature attributions. It is designed for **scalability and extension**, supporting additional modalities (e.g., methylation or spatial data) and integration of **regulatory priors** to expand biological interpretability. The repository also includes concise guidance for **parameter tuning and graph adaptation** to facilitate deployment across datasets and experimental contexts.
 
 ---
-
 ## Quick Start
 
 For full documentation and methods, see:  
@@ -93,7 +84,6 @@ For full documentation and methods, see:
 - `scripts/Prototype.ipynb`
 
 ---
-
 ## Reproducibility and Citation
 
 Each release of this repository is archived and citable via Zenodo DOI.
