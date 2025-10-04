@@ -88,5 +88,5 @@ For full documentation and methods, see:
 
 Each release of this repository is archived and citable via Zenodo DOI.
 
-> Yepes, S. *et al.* “MM-KPNN: Interpretable Multimodal Neural Networks for Single-Cell Integration.” GitHub Repository, 2025.  
+> Yepes, S. “MM-KPNN: Interpretable Multimodal Neural Networks for Single-Cell Integration.” GitHub Repository, 2025.  
 > DOI: [10.5281/zenodo.17194732](https://doi.org/10.5281/zenodo.17194732)
